@@ -2,8 +2,8 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>CodePen - Task manager UI</title>
-  <link rel="stylesheet" href="./style.css">
+  <title>Task manager UI</title>
+  <link rel="stylesheet" href="Assets/css/task.css">
 
 </head>
 <body>
@@ -71,7 +71,8 @@
   </div>
 </div>
 <!-- partial -->
-  <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="./script.js"></script>
+  <script src='Assets/js/jquery.min.js'></script>
+  <script  src="Assets/js/task.js"></script>
 
 </body>
 </html>

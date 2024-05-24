@@ -2,13 +2,13 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>CodePen - Login/Registration Form Transition</title>
-  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'><link rel="stylesheet" href="./style.css">
+  <title>Registration</title>
+  <link rel="stylesheet" href="Assets/css/login.css">
+
 
 </head>
 <body>
 <!-- partial:index.partial.html -->
-<p class="tip">Click on button in image container</p>
 <div class="cont">
   <div class="form sign-in">
     <h2>Welcome back,</h2>
@@ -20,9 +20,7 @@
       <span>Password</span>
       <input type="password" />
     </label>
-    <p class="forgot-pass">Forgot password?</p>
     <button type="button" class="submit">Sign In</button>
-    <button type="button" class="fb-btn">Connect with <span>facebook</span></button>
   </div>
   <div class="sub-cont">
     <div class="img">
@@ -40,34 +38,29 @@
       </div>
     </div>
     <div class="form sign-up">
-      <h2>Time to feel like home,</h2>
+      <h2>Let's make you an account</h2>
+    <form id="signin_Form" name="sigin_Form">
       <label>
-        <span>Name</span>
-        <input type="text" />
-      </label>
-      <label>
-        <span>Email</span>
-        <input type="email" />
-      </label>
-      <label>
-        <span>Password</span>
-        <input type="password" />
-      </label>
-      <button type="button" class="submit">Sign Up</button>
-      <button type="button" class="fb-btn">Join with <span>facebook</span></button>
+          <span>Name</span>
+          <input type="text" name="signin_Name" id="signin_Name"/>
+        </label>
+        <label>
+          <span>Email</span>
+          <input type="email" name="signin_Email" id="signin_Email"/>
+        </label>
+        <label>
+          <span>Password</span>
+          <input type="password" name="signin_Pass" id="signin_Pass"/>
+        </label>
+        <button type="submit" class="submit" id="singin_sub">Sign Up</button>
+    </form>
     </div>
   </div>
 </div>
 
-<a href="https://dribbble.com/shots/3306190-Login-Registration-form" target="_blank" class="icon-link">
-  <img src="http://icons.iconarchive.com/icons/uiconstock/socialmedia/256/Dribbble-icon.png">
-</a>
-<a href="https://codepen.io/suez/pen/XWyBpre" target="_blank" class="link-footer">New 2023 Version</a>
-<a href="https://twitter.com/NikolayTalanov" target="_blank" class="icon-link icon-link--twitter">
-  <img src="https://cdn1.iconfinder.com/data/icons/logotypes/32/twitter-128.png">
-</a>
 <!-- partial -->
-  <script  src="./script.js"></script>
+<script src="Assets/js/jquery.min.js"></script>
+<script src="Assets/js/login.js"></script>
 
 </body>
 </html>
