@@ -39,20 +39,20 @@
     </div>
     <div class="form sign-up">
       <h2>Let's make you an account</h2>
-    <form id="signin_Form" name="sigin_Form">
+    <form id="signinFrm" name="siginFrm">
       <label>
           <span>Name</span>
-          <input type="text" name="signin_Name" id="signin_Name"/>
+          <input type="text" name="signinName" id="signinName"/>
         </label>
         <label>
           <span>Email</span>
-          <input type="email" name="signin_Email" id="signin_Email"/>
+          <input type="email" name="signinEmail" id="signinEmail"/>
         </label>
         <label>
           <span>Password</span>
-          <input type="password" name="signin_Pass" id="signin_Pass"/>
+          <input type="password" name="signinPass" id="signinPass"/>
         </label>
-        <button type="submit" class="submit" id="singin_sub">Sign Up</button>
+        <button type="submit" class="submit" id="singinsub">Sign Up</button>
     </form>
     </div>
   </div>
