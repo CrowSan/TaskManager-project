@@ -54,6 +54,7 @@
         </label>
         <button type="submit" class="submit" id="singinsub">Sign Up</button>
     </form>
+    <p id="result"><p>
     </div>
   </div>
 </div>
