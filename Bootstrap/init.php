@@ -1,16 +1,15 @@
 <?php
-include "Config.php";
 include "Constants.php";
-include "Helper.php";
-include "Libs/registeration-lib.php";
-
+include BASE_PATH . "Bootstrap/Config.php";
+include BASE_PATH . "Bootstrap/Helper.php";
+include BASE_PATH . "Libs/registeration-lib.php";
 
 
 try {
-    $pdo = new PDO("mysql: db = $Connection->db; host=$Connection->host;" , $Connection->user, $Connection->pass);
-    // echo "Connection was Successful";
+    $pdo = new PDO("mysql: host=localhost; dbname=taskmanager;", "root", "");
+    // echo "connected";
 } catch (PDOException $e) {
-    echo "Connection failed: " . $e -> getMessage();
+    echo $e -> getMessage();
     die();
 }
 

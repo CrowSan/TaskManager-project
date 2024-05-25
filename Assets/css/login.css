@@ -264,7 +264,16 @@ input {
   bottom: 0;
   transform: translateX(-50%);
 }
-
+#result:empty{
+  display: none;
+}
 #result{
-  font-size: 10px;
+  padding: 10px 15px; 
+  width: 80%; 
+  margin: 20px auto; 
+  background: #ffffffe6; 
+  border-left: 5px solid #d4af7a; 
+  color: #521717; 
+  border-radius: 10px; 
+  font-family: sans-serif
 }

@@ -1,21 +1,6 @@
 <?php
 include "Bootstrap/init.php";
 
-// print_r($_POST);
-// print_r($_SERVER);
-function registration($userData){
-    global $pdo;
-    // $passwordHash = password_hash($userData["Password"], PASSWORD_BCRYPT);
-    // $query = 'INSERT INTO `users` (name) VALUES (:Name)';
-    $query = "SELECT * FROM `users`";
-    $result = $pdo->query($query);
-    // $stmt = $pdo -> prepare($query);
-    // $stmt -> execute([':Name'=>$userData['Name']]);
-    print_r($result);
-    // return $stmt -> rowCount() ? true : false;
-};
-
-
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($_POST["Action"] == "sign-in") {
