@@ -12,15 +12,18 @@
 <div class="cont">
   <div class="form sign-in">
     <h2>Welcome back,</h2>
-    <label>
-      <span>Email</span>
-      <input type="email" />
-    </label>
-    <label>
-      <span>Password</span>
-      <input type="password" />
-    </label>
-    <button type="button" class="submit">Sign In</button>
+    <form id="loginFrm" name="loginFrm">
+        <label>
+          <span>Email</span>
+          <input type="email" name="loginEmail" id="loginEmail"/>
+        </label>
+        <label>
+          <span>Password</span>
+          <input type="password" name="loginPass" id="loginPass"/>
+        </label>
+        <button type="submit" class="submit" id="loginsub">Log in</button>
+    </form>
+    <p id="result"><p>
   </div>
   <div class="sub-cont">
     <div class="img">

@@ -4,7 +4,7 @@ include BASE_PATH . "Bootstrap/Config.php";
 include BASE_PATH . "Bootstrap/Helper.php";
 include BASE_PATH . "Libs/registeration-lib.php";
 
-
+session_start();
 try {
     $pdo = new PDO("mysql: host=localhost; dbname=taskmanager;", "root", "");
     // echo "connected";

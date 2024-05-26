@@ -25,4 +25,27 @@ $(document).ready(function () {
           }
         });
     });
+
+
+    $("#loginFrm").submit(function (event) {
+      event.preventDefault();
+
+        var logFrmEmail = $("#loginEmail").val();
+        var logFrmPass = $("#loginPass").val();
+      
+        $.ajax({
+          url: "auth.php",
+          method: "POST",
+          data: {"Action": "log-in", "Email":logFrmEmail,"Password":logFrmPass},
+          success: function (result) {
+            if (result == true) {
+              $("#result").html("you're in 🎫");
+              
+            } else {
+              $("#result").html(result);
+              
+            }
+          }
+        });
+    });
   });
