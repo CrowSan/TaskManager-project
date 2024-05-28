@@ -178,6 +178,7 @@ body {
   cursor: pointer;
   color: White;
   font-weight: 700;
+  border: none;
 }
 .main .view .viewHeader .functions .button.active {
   background-color: #54b9cd;
@@ -277,6 +278,9 @@ input{
   border: 1px solid lightgray;
   border-right: 4px solid #89b9c9;
   border-radius: 5px;
+}
+input:focus-visible{
+  outline : 1px solid lightseagreen;
 }
 
 .fa-square-o, .fa-check-square-o{

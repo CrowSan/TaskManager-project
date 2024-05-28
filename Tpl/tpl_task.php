@@ -30,9 +30,10 @@
         <div class="title">Manage Tasks</div>
         <div class="functions">
           <div class="button inverz"><i class="fa fa-trash-o"></i></div>
-          <div class="button active">Add New Task</div>
-          <form id="newTaskFrm">
-            <input type="text" id="newTask" placeholder="enter new task">
+          <form id="newTaskFrm" name="newTaskFrm">
+            <input type="text" id="newTaskName" placeholder="enter new task">
+            <button type="submit" id="newTaskBtn" class="button active">Add New Task</button>
+            <p id="frmResult"></p>
           </form>
         </div>
       </div>

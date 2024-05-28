@@ -1,10 +1,15 @@
-(function() {
-  /*
-Inspired by dribble.com/shots/1507858-Dashboard
-*/
+    $(document).ready(function (){
+      $("#newTaskFrm").submit(function(event){
+        event.preventDefault();
+        var newTask = $("#newTaskName").val();
 
-
-}).call(this);
-
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiPGFub255bW91cz4iXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBRUc7RUFBQTs7OztBQUFBIiwic291cmNlc0NvbnRlbnQiOlsiIyMjXG5JbnNwaXJlZCBieSBkcmliYmxlLmNvbS9zaG90cy8xNTA3ODU4LURhc2hib2FyZFxuIyMjIl19
-//# sourceURL=coffeescript
+        $.ajax({
+          url: "task.php",
+          method: "POST",
+          data: {"Action":"addNewTask", "task":newTask},
+          success: function(result){
+            $("#frmResult").html(result);
+          }
+        });
+      });
+    });
