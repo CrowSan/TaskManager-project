@@ -2,7 +2,7 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>Task manager UI</title>
+  <title>Task manager</title>
   <link rel="stylesheet" href="Assets/css/task.css">
 
 </head>
@@ -15,11 +15,6 @@
   </div>
   <div class="main">
     <div class="nav">
-      <div class="searchbox">
-        <div><i class="fa fa-search"></i>
-          <input type="search" placeholder="Search"/>
-        </div>
-      </div>
       <div class="menu">
         <div class="title">Navigation</div>
         <ul>
@@ -34,9 +29,11 @@
       <div class="viewHeader">
         <div class="title">Manage Tasks</div>
         <div class="functions">
-          <div class="button active">Add New Task</div>
-          <div class="button">Completed</div>
           <div class="button inverz"><i class="fa fa-trash-o"></i></div>
+          <div class="button active">Add New Task</div>
+          <form id="newTaskFrm">
+            <input type="text" id="newTask" placeholder="enter new task">
+          </form>
         </div>
       </div>
       <div class="content">
@@ -45,23 +42,15 @@
           <ul>
             <li class="checked"><i class="fa fa-check-square-o"></i><span>Update team page</span>
               <div class="info">
-                <div class="button green">In progress</div><span>Complete by 25/04/2014</span>
+                <span>Complete by 25/04/2014</span>
               </div>
             </li>
             <li><i class="fa fa-square-o"></i><span>Design a new logo</span>
               <div class="info">
-                <div class="button">Pending</div><span>Complete by 10/04/2014</span>
+                <span>Complete by 10/04/2014</span>
               </div>
             </li>
             <li><i class="fa fa-square-o"></i><span>Find a front end developer</span>
-              <div class="info"></div>
-            </li>
-          </ul>
-        </div>
-        <div class="list">
-          <div class="title">Tomorrow</div>
-          <ul>
-            <li><i class="fa fa-square-o"></i><span>Find front end developer</span>
               <div class="info"></div>
             </li>
           </ul>

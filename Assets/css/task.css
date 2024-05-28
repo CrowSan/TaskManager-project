@@ -22,9 +22,6 @@ body {
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
   border-radius: 4px;
-  -moz-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
-  -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
 }
 
 .pageHeader {
@@ -243,7 +240,7 @@ body {
   float: right;
 }
 .main .view .content .list ul li .info span {
-  font-weight: 300;
+  padding-right: 15px;
 }
 .main .view .content .list ul li .info .button {
   float: right;
@@ -266,4 +263,22 @@ body {
 
 .clear {
   clear: both;
+}
+
+form{
+  display: flex;
+}
+
+input{
+  height: 8px;
+  width: 200px;
+  padding: 10px;
+  margin: 0px 10px;
+  border: 1px solid lightgray;
+  border-right: 4px solid #89b9c9;
+  border-radius: 5px;
+}
+
+.fa-square-o, .fa-check-square-o{
+  cursor: pointer;
 }
