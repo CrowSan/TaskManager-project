@@ -39,11 +39,9 @@ $(document).ready(function () {
           data: {"Action": "log-in", "Email":logFrmEmail,"Password":logFrmPass},
           success: function (result) {
             if (result == true) {
-              $("#result").html("you're in 🎫");
-              
+              window.location.href = 'index.php';
             } else {
               $("#result").html(result);
-              
             }
           }
         });

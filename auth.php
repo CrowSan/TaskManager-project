@@ -20,8 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         if ($_POST["Action"] == "log-in") {
             if (login ($_POST)) {
-                echo "you done<br> <pre>";
-                print_r($_SESSION);
+                echo true;
             } else {
                 Msg("Email or password was incorrect");
             }

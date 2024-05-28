@@ -24,6 +24,8 @@
         <button type="submit" class="submit" id="loginsub">Log in</button>
     </form>
     <p id="result"><p>
+    <p id="result2"><p>
+
   </div>
   <div class="sub-cont">
     <div class="img">
