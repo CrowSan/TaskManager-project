@@ -8,6 +8,10 @@ function isLoggedIn($session){
     return isset($session["login"]) ? true : false;
 }
 
+// function getUserId(){
+//     $_SESSION['login'][0]['id'];
+// }
+
 function redirect($url){
     header("Location: $url");
 }

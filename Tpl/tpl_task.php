@@ -19,12 +19,20 @@
     <div class="nav">
       <div class="menu">
         <div class="title">Navigation</div>
-        <ul>
-          <li> <i class="fa fa-home"></i>Home</li>
-          <li><i class="fa fa-signal"></i>Activity</li>
-          <li class="active"> <i class="fa fa-tasks"></i>Manage Tasks</li>
-          <li> <i class="fa fa-envelope"></i>Messages</li>
+        <ul class="folderList">
+        <!-- <li class="active"><i class="fa fa-tasks"></i>Manage Tasks</li> -->
+
+        <?php foreach (getFolder(getUserId()) as $row):?>
+          <a class="" href="?<?= $row['id']?>"><i class="fa fa-tasks"></i><?= $row['name']?></a>
+          <?php endforeach;?>
         </ul>
+        <form id="newFolderFrm" name="newFolderFrm">
+          <div class="frmBody">
+            <input type="text" id="newFolderName" placeholder="enter new folder">
+            <button type="submit" id="newFolderBtn" name="<?= getUserId();?>" class="">+</button>
+            <p id="frmFolderResult"></p>
+          </div>
+        </form>
       </div>
     </div>
     <div class="view">
@@ -33,9 +41,9 @@
         <div class="functions">
           <div class="button inverz"><i class="fa fa-trash-o"></i></div>
           <form id="newTaskFrm" name="newTaskFrm">
+            <p id="frmResult"></p>
             <input type="text" id="newTaskName" placeholder="enter new task">
             <button type="submit" id="newTaskBtn" class="button active">Add New Task</button>
-            <p id="frmResult"></p>
           </form>
         </div>
       </div>

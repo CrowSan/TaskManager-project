@@ -270,7 +270,7 @@ form{
   display: flex;
 }
 
-input{
+#newTaskName{
   height: 8px;
   width: 200px;
   padding: 10px;
@@ -279,10 +279,61 @@ input{
   border-right: 4px solid #89b9c9;
   border-radius: 5px;
 }
+
+#newFolderName{
+  height: 8px;
+  width: 55%;
+  padding: 10px;
+  margin: 0px 9px 0px 0px;
+  border: 1px solid lightgray;
+  border-right: 4px solid #89b9c9;
+  border-radius: 5px;
+}
+
+#newFolderBtn{
+  border-radius: 5px;
+    margin-top: 2px;
+    height: 25px;
+    padding: 0px 8px;
+    border: none;
+    background: #54b9cd;
+    color: white;
+    font-weight: bold;
+    font-size: larger;
+}
+
+#frmFolderResult{
+  margin: 5px 10px;
+}
+
+.frmBody{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px 0px;
+}
+
 input:focus-visible{
   outline : 1px solid lightseagreen;
 }
 
 .fa-square-o, .fa-check-square-o{
   cursor: pointer;
+}
+
+.folderList{
+  padding-left: 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  font-size: medium;
+  color: #2f2f2f;
+}
+
+.folderList a{
+  color: #2f2f2f;
+    text-decoration: none;
+}
+
+.folderList i{
+  margin-right: 10px;
 }
