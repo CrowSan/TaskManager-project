@@ -20,10 +20,9 @@
       <div class="menu">
         <div class="title">Navigation</div>
         <ul class="folderList">
-        <!-- <li class="active"><i class="fa fa-tasks"></i>Manage Tasks</li> -->
-
         <?php foreach (getFolder(getUserId()) as $row):?>
-          <a class="" href="?<?= $row['id']?>"><i class="fa fa-tasks"></i><?= $row['name']?></a>
+          <button class="folderBtn" data-GetFolderId="<?=$row['id']?>"><i class="fa fa-tasks"></i><?= $row['name']?></button>
+          
           <?php endforeach;?>
         </ul>
         <form id="newFolderFrm" name="newFolderFrm">
@@ -42,7 +41,7 @@
           <div class="button inverz"><i class="fa fa-trash-o"></i></div>
           <form id="newTaskFrm" name="newTaskFrm">
             <p id="frmResult"></p>
-            <input type="text" id="newTaskName" placeholder="enter new task">
+            <input type="text" id="newTaskName" data-SendFolderId="" placeholder="enter new task">
             <button type="submit" id="newTaskBtn" class="button active">Add New Task</button>
           </form>
         </div>
@@ -51,24 +50,11 @@
         <div class="list">
           <div class="title">Today</div>
           <ul>
-            <li class="checked"><i class="fa fa-check-square-o"></i><span>Update team page</span>
-              <div class="info">
-                <span>Complete by 25/04/2014</span>
-              </div>
-            </li>
-            <li><i class="fa fa-square-o"></i><span>Design a new logo</span>
-              <div class="info">
-                <span>Complete by 10/04/2014</span>
-              </div>
-            </li>
-            <li><i class="fa fa-square-o"></i><span>Find a front end developer</span>
-              <div class="info"></div>
-            </li>
+          <!-- class="checked" -->
+          <?php foreach (getTask(getUserId()) as $row):?>
+            <li><i class="fa fa-check-square-o"></i><span><?= $row['name']?></span></li>
+          <?php endforeach;?>
           </ul>
-          <pre>
-          <?= print_r($_SESSION['login'][0]);?>
-          </pre>
-
         </div>
       </div>
     </div>

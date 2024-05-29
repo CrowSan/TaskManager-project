@@ -337,3 +337,21 @@ input:focus-visible{
 .folderList i{
   margin-right: 10px;
 }
+
+.folderBtn{
+  border-radius: 5px;
+  margin-top: 3px;
+  padding: 5px 15px;
+  border: none;
+  background: #54b9cd;
+  color: white;
+  font-size: medium;
+  cursor: pointer;
+  width: 85%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.active {
+  background-color: #54cd82;
+}
