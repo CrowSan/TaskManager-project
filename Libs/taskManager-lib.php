@@ -9,13 +9,18 @@ function getFolder($user_Id){
     return $result;
 }
 
-function getTask($user_Id){
+
+# select forlder -> ajax(folder_id, user_id) -> task.php($_POST['Action'] == folderdata) -> getTask($user_Id, folder_id) -> echo Result one by one
+function getTask($user_Id, $folder_id){
     global $pdo;
-    $taskQuery = "SELECT * FROM tasks WHERE user_id = :uid";
-    $stmt = $pdo -> prepare($taskQuery);
-    $stmt -> execute([':uid'=>$user_Id]);
+    $taaskQuery = "SELECT * FROM tasks WHERE user_id = :uid AND folder_id = :fid";
+    $stmt = $pdo -> prepare($taaskQuery);
+    $stmt -> execute([':uid' => $user_Id, ':fid' => $folder_id]);
     $result = $stmt -> fetchAll(PDO::FETCH_ASSOC);
-    return $result;
+    foreach ($result as $row) {
+        //htmlspecialchars( $row["name"]) make sure that we get simple string from sql and not some fuckedup shit that has hidden code in it.
+        echo "<li><i class='fa fa-square-o'></i><span>" . htmlspecialchars( $row["name"]) . "</span></li>";
+    }
 }
 
 function getUserId(){

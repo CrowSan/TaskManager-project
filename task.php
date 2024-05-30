@@ -11,5 +11,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         #RUN add new Folder function("$_POST["folder"]")
         addFolderTask($_POST["folder"], $_POST["user"]);
     }
+    elseif ($_POST["Action"] == "folderData") {
+        getTask($_POST['user'] , $_POST['folder']);
+    }
 }
-
+// $_POST['folder'] = 24;
+// $_POST['user'] = 4;
+// print_r ((getTask($_POST['folder'], $_POST['user'])));

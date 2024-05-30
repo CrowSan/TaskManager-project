@@ -11,9 +11,9 @@
 <div class="page">
   <div class="pageHeader">
     <div class="title">Dashboard</div>
-    <div class="userPanel"><i class="fa fa-chevron-down"></i>
+    <div class="userPanel">
     <span class="username"><?= print_r($_SESSION['login'][0]['name']);?> </span>
-    <img src="https://s3.amazonaws.com/uifaces/faces/twitter/kolage/73.jpg" width="40" height="40"/></div>
+    <img src="🖼" width="40" height="40"/></div>
   </div>
   <div class="main">
     <div class="nav">
@@ -21,9 +21,8 @@
         <div class="title">Navigation</div>
         <ul class="folderList">
         <?php foreach (getFolder(getUserId()) as $row):?>
-          <button class="folderBtn" data-GetFolderId="<?=$row['id']?>"><i class="fa fa-tasks"></i><?= $row['name']?></button>
-          
-          <?php endforeach;?>
+          <button class="folderBtn" data-userId="<?= getUserId();?>" data-GetFolderId="<?=$row['id']?>"><i class="fa fa-tasks"></i><?= $row['name']?></button>
+        <?php endforeach;?>
         </ul>
         <form id="newFolderFrm" name="newFolderFrm">
           <div class="frmBody">
@@ -49,11 +48,8 @@
       <div class="content">
         <div class="list">
           <div class="title">Today</div>
-          <ul>
+          <ul id="showtasks">
           <!-- class="checked" -->
-          <?php foreach (getTask(getUserId()) as $row):?>
-            <li><i class="fa fa-check-square-o"></i><span><?= $row['name']?></span></li>
-          <?php endforeach;?>
           </ul>
         </div>
       </div>

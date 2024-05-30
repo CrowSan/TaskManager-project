@@ -1,18 +1,17 @@
     $(document).ready(function (){
       $("#newTaskFrm").submit(function(event){
         event.preventDefault();
-        var newTask = $("#newTaskName").val();
-        var folderid = $("#newTaskName").attr('data-SendFolderId');
-        var userId = $("#newFolderBtn").attr('name');
-  
+        var taskName = $("#newTaskName").val();
+        var folderid = $(".active").attr('data-getfolderid');
+        var userId = $(".active").attr('data-userid');
 
         $.ajax({
           url: "task.php",
           method: "POST",
-          data: {"Action":"addNewTask", "task":newTask, "folder_id":folderid, 'user_id': userId},
+          data: {"Action":"addNewTask", "task":taskName, "folder_id":folderid, 'user_id': userId},
           success: function(result){
             if (result == true) {
-              $("#frmResult").html("task added ✔");
+              window.location.href = 'index.php';
             } else {
               $("#frmResult").html(result);
             }
@@ -37,10 +36,20 @@
     });
 
 
+    $(".folderBtn").click(function(){
+      var folderID = $(this).attr('data-GetFolderId');
+      var userID = $(this).attr('data-userId');
+      $(".folderBtn").removeClass("active");
+      $(this).addClass("active");
 
-      $(".folderBtn").click(function(){
-        var folderID = $(this).attr('data-GetFolderId');
-        $(this).toggleClass("active");
-        $("#newTaskName").attr("data-SendFolderId", folderID);
+      $.ajax({
+        url: "task.php",
+        method: "POST",
+        data: {"Action":"folderData", "folder":folderID, "user":userID},
+        success: function(result){
+          $("#showtasks").html(result);
+        }
       });
+    });
+
 
